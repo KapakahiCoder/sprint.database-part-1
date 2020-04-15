@@ -1,6 +1,6 @@
 -- Your SQL here
 SELECT * FROM students
-WHERE age(year date_of_birth interval '25 years' < year current_date());
+WHERE date_of_birth < now() - interval '25 years';
 
 --interval to set timeframe search interval keyword with postgres
 --age(timestamp CURDATE(), timestamp date_of_birth)
